@@ -2,7 +2,7 @@
 
 {% if meta %}
 	{% if meta.description %}{% meta 'description' meta.description %}
-	{% else %}	{{ meta.description }}
+	{% else %}	{% meta 'description' "rihdi" %}
 	{% endif %}
 	{% if meta.keywords %}{% meta_list 'keywords' meta.keywords %}{% endif %}
 	{% if meta.use_og %}
