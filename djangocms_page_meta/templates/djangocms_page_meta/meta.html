@@ -1,7 +1,9 @@
 {% load meta_extra %}
 
 {% if meta %}
-	{% if meta.description %}{% meta 'description' meta.description %}{% endif %}
+	{% if meta.description %}{% meta 'description' meta.description %}
+	{% else %}	{{ meta 'description' "THIS IS A TEST DESCRIPTION" }}
+	{% endif %}
 	{% if meta.keywords %}{% meta_list 'keywords' meta.keywords %}{% endif %}
 	{% if meta.use_og %}
 		{% if meta.title %}{% og_prop 'title' meta.title %}{% endif %}
